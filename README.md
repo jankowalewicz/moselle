@@ -1,6 +1,6 @@
 ![banner](https://raw.githubusercontent.com/jankowalewicz/moselle/master/gh-resources/banner.png)
 
-The project aims to be a UI for ICE (in-car-entertainment) system. Mainly used together with the [Raspberry Pi 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/) and a [touchscreen](https://www.waveshare.com/3.2inch-rpi-lcd-b.htm).
+The project aims to be a UI for ICE (in-car-entertainment) systems. Mainly used together with the [Raspberry Pi 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/) and a [touchscreen](https://www.waveshare.com/3.2inch-rpi-lcd-b.htm).
 
 ### Planned features
 
