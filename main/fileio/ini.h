@@ -1,5 +1,8 @@
 // Copyright (c) 2018 Jan Kowalewicz. All rights reserved.
 
+#ifndef __ini_h__
+#define __ini_h__
+
 #include <QString>
 
 class ini_class {
@@ -15,3 +18,5 @@ class ini_class {
     private:
     QString file_path;
 };
+
+#endif // __ini_h__

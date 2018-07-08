@@ -5,6 +5,8 @@ TARGET = msle
 TEMPLATE = app
 
 SOURCES += main/main.cpp \
-            main/fileio/ini.cpp
+            main/fileio/ini.cpp \
+            main/profilemanager/profile.cpp
 
-HEADERS += main/fileio/ini.h
+HEADERS += main/fileio/ini.h \
+            main/profilemanager/profile.h

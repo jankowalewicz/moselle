@@ -1,9 +1,12 @@
 // boilerplate code
 
 #include "fileio/ini.h"
+#include "profilemanager/profile.h"
+
 #include <QApplication>
 #include <QMainWindow>
 #include <QString>
+#include <QStringList>
 #include <QPlainTextEdit>
 
 int main(int argc, char **argv) {
@@ -17,8 +20,16 @@ int main(int argc, char **argv) {
     QString head_val = ini.get_val("HEAD");
     ini.create_new_val("CONTENT", "nothing");
     if (ini.write_val("HEAD", "test2")) {
-        editor->setPlainText("old value: " + head_val + "\n\n\nnew value: " + ini.get_val("HEAD") + "\n\n\nthe new value: " + ini.get_val("CONTENT"));
+        editor->insertPlainText("old value: " + head_val + "\nnew value: " + ini.get_val("HEAD") + "\nthe new value: " + ini.get_val("CONTENT"));
     }
+    
+    profile *default_profile = new profile("/projects/moselle-project/dist/default-profile.prof");
+    editor->insertPlainText("\n\n\nProfile name: " + default_profile->get_profile_username() + "\nProfile fav playlists: \n");
+    QStringList my_playlists = default_profile->get_profile_fav_playlists();
+    for (int i=0; i < my_playlists.length(); i++) {
+        editor->insertPlainText(my_playlists.at(i) + "\n");
+    }
+    
     window.show();
     return app.exec();
 }
