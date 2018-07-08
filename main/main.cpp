@@ -3,6 +3,7 @@
 #include "fileio/ini.h"
 #include "profilemanager/profile.h"
 #include "profilemanager/profile_creator.h"
+#include "ui/homescreen.h"
 
 #include <QApplication>
 #include <QMainWindow>
@@ -12,9 +13,9 @@
 
 int main(int argc, char **argv) {
     QApplication app(argc, argv);
-    QMainWindow window;
+    homescreen *window = new homescreen();
     QPlainTextEdit *editor = new QPlainTextEdit();
-    window.setCentralWidget(editor);
+    window->setCentralWidget(editor);
     
     ini_class ini;
     ini.set_file("/projects/moselle-project/tests/fileio/TestFile.ini");
@@ -38,6 +39,6 @@ int main(int argc, char **argv) {
     profile *created_profile = new profile("/projects/moselle-project/tests/profiles/creation.profile");
     editor->insertPlainText("\n\n\nName of created profile: " + created_profile->get_profile_username() + "\n");
     
-    window.show();
+    window->show();
     return app.exec();
 }
