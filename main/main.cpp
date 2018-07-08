@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
         editor->insertPlainText("old value: " + head_val + "\nnew value: " + ini.get_val("HEAD") + "\nthe new value: " + ini.get_val("CONTENT"));
     }
     
-    profile *default_profile = new profile("/projects/moselle-project/tests/profile/default-profile.prof");
+    profile *default_profile = new profile("/projects/moselle-project/tests/profiles/default-profile.prof");
     editor->insertPlainText("\n\n\nProfile name: " + default_profile->get_profile_username() + "\nProfile fav playlists: \n");
     QStringList my_playlists = default_profile->get_profile_fav_playlists();
     for (int i=0; i < my_playlists.length(); i++) {
