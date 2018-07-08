@@ -6,7 +6,9 @@ TEMPLATE = app
 
 SOURCES += main/main.cpp \
             main/fileio/ini.cpp \
-            main/profilemanager/profile.cpp
+            main/profilemanager/profile.cpp \
+            main/profilemanager/profile_creator.cpp
 
 HEADERS += main/fileio/ini.h \
-            main/profilemanager/profile.h
+            main/profilemanager/profile.h \
+            main/profilemanager/profile_creator.h

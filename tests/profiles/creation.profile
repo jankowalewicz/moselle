@@ -1,0 +1,5 @@
+PVER = 1.0
+CREATOR = sys
+USERNAME = Jan
+FAV_COLOR_SYS = white
+PROFILE_PICTURE = none

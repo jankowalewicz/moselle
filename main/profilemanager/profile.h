@@ -28,11 +28,15 @@ class profile {
     QStringList get_profile_fav_apps();
 #endif
 
+    bool add_to_fav_playlists(const QString &_absolute_path);
+    bool add_to_fav_radios(const QString &_absolute_path);
+
     protected:
     ini_class *ini;
     QString profile_file;
     bool profile_exists_and_correct(const QString &_profile_file);
     QStringList list_helper(const QString &l);
+    bool add_to(const QString &_key, const QString &_absolute_path);
 };
 
 #endif // __profile_h__

@@ -51,6 +51,14 @@ QStringList profile::get_profile_fav_radios() {
     return this->list_helper(all_radios);
 }
 
+bool profile::add_to_fav_playlists(const QString &_absolute_path) {
+    return this->add_to("FAV_PLAYLISTS", _absolute_path);
+}
+
+bool profile::add_to_fav_radios(const QString &_absolute_path) {
+    return this->add_to("FAV_RADIOS", _absolute_path);
+}
+
 bool profile::profile_exists_and_correct(const QString &_profile_file) {
     QFileInfo fi(_profile_file);
     if (fi.exists()) {
@@ -84,4 +92,21 @@ QStringList profile::list_helper(const QString &l) {
         pos += pattern.matchedLength();
     }
     return ret;
+}
+
+bool profile::add_to(const QString &_key, const QString &_absolute_path) {
+    // just read old and append/overwrite
+    QString _l = ini->get_val(_key);
+    if (!_l.contains(_absolute_path)) {
+            QString ins(" (" + _absolute_path + ")");
+        QString l(_l + ins);
+        if (ini->write_val(_key, l)) {
+            return true;
+        } else {
+            return false;
+        }
+    } else {
+        return false;
+    }
+    return false;
 }

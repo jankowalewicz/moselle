@@ -5,5 +5,5 @@ FAV_COLOR_SYS = white
 PROFILE_PICTURE = /home/moselle/profiles/default-profile/default.png
 # No error is thrown here because the system tests itself with these
 # lines.
-FAV_PLAYLISTS = (/home/moselle/library/Test1.playlist) (/home/moselle/library/Test2.playlist)
+FAV_PLAYLISTS = (/home/moselle/library/Test1.playlist) (/home/moselle/library/Test2.playlist) (/home/moselle/library/TestPlaylist3.playlist)
 FAV_RADIOS = (/home/moselle/radios/TestStation1.radio) (/home/moselle/radio/TestStation2.radio)
